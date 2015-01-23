@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Prestashop" default="build">
+    <property name="php" value="php"/>
+
+    <target name="build" depends="lint,phpcs_sniffs"/>
+
+    <target name="lint">
+        <apply executable="${php}" failonerror="true">
+            <arg value="-l"/>
+
+            <fileset dir="${basedir}">
+                <include name="**/*.php"/>
+                <exclude name="**/cache/**"/>
+                <exclude name="**/tools/**"/>
+            </fileset>
+        </apply>
+    </target>
+</project>
