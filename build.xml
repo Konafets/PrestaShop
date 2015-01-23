@@ -2,7 +2,7 @@
 <project name="Prestashop" default="build">
     <property name="php" value="php"/>
 
-    <target name="build" depends="lint,phpcs_sniffs"/>
+    <target name="build" depends="lint"/>
 
     <target name="lint">
         <apply executable="${php}" failonerror="true">
